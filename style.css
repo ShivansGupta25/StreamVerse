@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:  'Helvetica Neue',Arial,  sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+    /* <!----------------------------------------------------------------- HEADER -----------------------------------------------------------------> */
+.header{
+    background: linear-gradient(90deg,rgb(0,0,0,0.8) 0%, rgb(0,0,0,0.4) 100%);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e50914;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-container{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search-box{
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-input{
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease
+}
+
+.search-input:focus{
+    border-color: #e50914;
+    box-shadow: 0 0 10px rgba(229,9,20,0.3);
+}
+
+.filters{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+select{
+    padding: 8px 15px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background:  rgba(0,0,0,0.8);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+select:focus{
+    border-color: #e50914;
+}
+
+.clear-btn{
+    padding: 8px 20px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    display: none;
+}
+
+.clear-btn:hover{
+    background: #b8070f;
+}
+
+.clear-btn.show{
+    display: inline-block;
+}
+
+
+
+    /* <!----------------------------------------------------------------- MAIN BODY -----------------------------------------------------------------> */
+
+
+.main-content{
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;   
+}
+
+.section-title{
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.carousel-container{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.carousel{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding:  20px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+

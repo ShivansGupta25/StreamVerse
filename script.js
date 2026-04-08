@@ -57,7 +57,7 @@ class MovieExplorer {
         trendingNext.addEventListener("click", () => this.scrollCarousel('next'));
     }
 
-    // ─── Genre Loader ────────────────────────────────────────────
+    ////////////////////////////////////// Genre Loader ///////////////////////////////////
     async loadGenres() {
         try {
             const response = await fetch(
@@ -81,7 +81,7 @@ class MovieExplorer {
         }
     }
 
-    // ─── Year Filter Setup ───────────────────────────────────────
+    ////////////////////////////////////// Year Filter Setup ///////////////////////////////////
     setupYearFilter() {
         const yearSelect = document.getElementById("yearFilter");
         const currentYear = new Date().getFullYear();
@@ -93,7 +93,7 @@ class MovieExplorer {
         }
     }
 
-    // ─── Trending Movies ────────────────────────────────────────
+    ////////////////////////////////////// Trending Movies /////////////////////////////////// 
     async loadTrendingMovies() {
         try {
             const response = await fetch(
@@ -152,7 +152,7 @@ class MovieExplorer {
         </div>`;
     }
 
-    // ─── Discover / Random Movies ────────────────────────────────
+    ////////////////////////////////////// Discover Random Movies ///////////////////////////////////
     async loadRandomMovies() {
         try {
             const randomPage = Math.floor(Math.random() * 10) + 1;
@@ -174,7 +174,7 @@ class MovieExplorer {
         }
     }
 
-    // ─── Movie Grid Display ──────────────────────────────────────
+    ////////////////////////////////////// Movie Grid Display ///////////////////////////////////
     displayMovies(movies, containerId) {
         const container = document.getElementById(containerId);
         if (!movies || movies.length === 0) {
@@ -230,7 +230,7 @@ class MovieExplorer {
         </div>`;
     }
 
-    // ─── Search ──────────────────────────────────────────────────
+    ////////////////////////////////////// Search ///////////////////////////////////
     async handleSearch(query) {
         const trimmedQuery = query.trim();
         const clearBtn = document.getElementById("clearBtn");
@@ -283,7 +283,7 @@ class MovieExplorer {
         }
     }
 
-    // ─── Sorting ─────────────────────────────────────────────────
+    // ///////////////////////////////////Sorting  ///////////////////////////////////
     sortMovies(movies, sortBy) {
         const sorted = [...movies];
         switch (sortBy) {
@@ -308,7 +308,7 @@ class MovieExplorer {
         }
     }
 
-    // ─── Filters ─────────────────────────────────────────────────
+    ////////////////////////////////////// Filters ///////////////////////////////////
     async handleFilterChange() {
         const genreFilter = document.getElementById("genreFilter");
         const searchInput = document.getElementById("searchInput");
@@ -370,7 +370,7 @@ class MovieExplorer {
         }
     }
 
-    // ─── Clear Filters ───────────────────────────────────────────
+    ////////////////////////////////////// Clear Filters ///////////////////////////////////
     clearAllFilters() {
         const trendingSection = document.getElementById("trendingSection");
         document.getElementById("searchInput").value = "";
@@ -386,7 +386,7 @@ class MovieExplorer {
         this.loadRandomMovies();
     }
 
-    // ─── Carousel Scroll ─────────────────────────────────────────
+    ////////////////////////////////////// Carousel Scroll ///////////////////////////////////
     scrollCarousel(direction) {
         const carousel = document.getElementById("trendingCarousel");
         const scrollAmount = 320;
@@ -398,7 +398,7 @@ class MovieExplorer {
     }
 }
 
-// ─── Initialize ──────────────────────────────────────────────────
+// ////////////////////////////////////// Initialize ///////////////////////////////////
 document.addEventListener("DOMContentLoaded", () => {
     new MovieExplorer();
 });

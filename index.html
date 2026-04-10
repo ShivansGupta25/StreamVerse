@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StreamVerse - Movie Explorer</title>
-    <meta name="description" content="StreamVerse — Discover trending movies, search by genre, year, and rating. Your ultimate movie exploration hub.">
+    <meta name="description"
+        content="StreamVerse — Discover trending movies, search by genre, year, and rating. Your ultimate movie exploration hub.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/Image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -17,9 +20,26 @@
     <!-- HEADER -->
     <header class="header">
         <div class="header-inner">
-            <div class="logo">
-                <span class="logo-text">Stream<span class="logo-accent">Verse</span></span>
+            <div class="header-top">
+                <div class="logo">
+                    <span class="logo-text">Stream<span class="logo-accent">Verse</span></span>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <!-- Sun icon (shown in dark mode) -->
+                    <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                    <!-- Moon icon (shown in light mode) -->
+                    <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
             </div>
+
+            
             <div class="search-container">
                 <div class="search-box">
                     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -62,13 +82,17 @@
             <h2 class="section-title">🔥 Trending Movies</h2>
             <div class="carousel-container">
                 <button class="carousel-btn prev" id="trendingPrev" aria-label="Previous">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
                 </button>
                 <div class="carousel" id="trendingCarousel">
                     <div class="loading">Loading trending movies...</div>
                 </div>
                 <button class="carousel-btn next" id="trendingNext" aria-label="Next">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
                 </button>
             </div>
         </section>
@@ -88,6 +112,7 @@
         <p>StreamVerse &copy; 2026 </p>
     </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
